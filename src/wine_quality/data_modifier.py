@@ -5,7 +5,7 @@ import numpy as np
 
 class DataModifier:
     @staticmethod
-    def normalize_data(cls, X, method='std_dev'):
+    def normalize_data(X, method='std_dev'):
         n_features = len(X[0])
         n_samples = len(X)
         for i in range(n_features):

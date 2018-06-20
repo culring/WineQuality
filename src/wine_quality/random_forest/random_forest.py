@@ -17,7 +17,7 @@ class RandomForest:
     def _generate_random_sequence(self, n, end, begin=0):
         return random.sample(range(begin, end), n)
 
-    def fit(self, X, y, n_trees=1, n_samples='all', n_features='all'):
+    def fit(self, X, y, n_trees: int = 1, n_samples='all', n_features='all'):
         if n_samples == 'all':
             n_samples = len(X)
         elif type(n_samples) != int:
