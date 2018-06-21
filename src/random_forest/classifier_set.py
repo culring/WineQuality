@@ -11,7 +11,7 @@ class ClassifierSet:
     def predict(self, X):
         y = []
         for sample in X:
-            votes = [model.predict([sample]) for model in self._model]
+            votes = [model.predict([sample])[0] for model in self._model]
             y.append(sum(votes) / len(votes))
 
         return y
